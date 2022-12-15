@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="desplegarMenu()">
+        <ion-icon slot="start" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Justificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br><br>
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-title>Justifica tu inasistencia!</ion-card-title>
+    </ion-card-header>
+    <ion-textarea><b> Ingrese Texto</b></ion-textarea>
+    <img src="assets/Subir archivo.png" alt="" id="xde">
+    <ion-button  expand="full" (click)="xde('top')">
+      Subir justificativo
+    </ion-button>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-icon slot="primary" name="logo-instagram"></ion-icon>
+    <ion-icon slot="secondary" name="globe"></ion-icon>
+    <ion-title>DUOC UC</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,25 @@
+{
+  "clases": [
+    {
+      "nom_asig": "Programación Móvil",
+      "modulo_seccion": "005D",
+      "fecha_clase": "14/12/2022",
+      "rut_estudiante": "54545456465",
+      "id": 1
+    },
+    {
+      "nom_asig": "Programación WEB",
+      "modulo_seccion": "010D",
+      "fecha_clase": "14/12/2022",
+      "rut_estudiante": "54545456465",
+      "id": 2
+    },
+    {
+      "nom_asig": "Arquitectura",
+      "modulo_seccion": "022D",
+      "fecha_clase": "14/12/2022",
+      "rut_estudiante": "54545456465",
+      "id": 3
+    }
+  ]
+}

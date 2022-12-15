@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="desplegarMenu()">
+        <ion-icon slot="start" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Gestión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <h2 class="ion-margin-horizontal">Bienvenido!</h2>
+  <img src="/assets/alumnoingresado.png" alt="">
+  <ion-button expand="full" color="warning" routerLink="/asig-alumno">
+    Asignaturas que tienes..
+  </ion-button>
+  <ion-button expand="full" color="warning" routerLink="/leer-qr">
+    Leer código QR
+  </ion-button>
+  <ion-button expand="full" color="warning" routerLink="/justificar">
+    Justificar Asistencia
+  </ion-button>
+  <ion-button expand="full" color="warning" routerLink="/ver-horario">
+    Ver Horario
+  </ion-button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-icon slot="primary" name="logo-instagram"></ion-icon>
+    <ion-icon slot="secondary" name="globe"></ion-icon>
+    <ion-title>DUOC UC</ion-title>
+  </ion-toolbar>
+</ion-footer>

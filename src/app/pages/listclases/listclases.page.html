@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="desplegarMenu()">
+        <ion-icon slot="start" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Lista de Clases Realizadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header color="warning">
+      <h6><b>Clases</b></h6>
+    </ion-list-header>
+    <ion-item *ngFor="let c of clases">
+      <ion-col><b>{{c.id}}</b></ion-col>
+      <ion-col>{{c.nom_asig}}</ion-col>
+      <ion-col>{{c.modulo_seccion}}</ion-col>
+      <ion-col>{{c.fecha_clase}}</ion-col>
+      <ion-col>{{c.rut_estudiante}}</ion-col>
+    </ion-item>
+  </ion-list>
+</ion-content>

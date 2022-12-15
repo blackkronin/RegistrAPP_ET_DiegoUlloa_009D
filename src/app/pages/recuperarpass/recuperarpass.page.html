@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Registr APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card> 
+    <br><br><br><br>
+    <ion-card>
+      <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+        <ion-card-title color="dark" id="tituloRecp">Recuperar Contraseña</ion-card-title>
+        <br>
+        <ion-item>
+          <ion-label position="floating">Email: </ion-label>
+          <ion-input type="email" placeholder="Escribe aquí.."
+                    name="email" value="" [(ngModel)]= "recuperacion.email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                    required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirma Email: </ion-label>
+          <ion-input type="email" placeholder="Escribe aquí.."
+                    name="email" value="" [(ngModel)]= "recuperacion.re_email"
+                    required>
+          </ion-input>
+        </ion-item>
+
+        <ion-button [disabled] ="formulario.invalid"
+                type="submit" expand="block" routerLink="#" color="warning">
+          Recuperar Contraseña
+        </ion-button>
+      </form>
+    </ion-card> 
+    <ion-button expand="block" color="warning" routerLink="/login">
+      Volver a Inicio de Sesión
+    </ion-button>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-title slot="start">Duoc UC</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="desplegarMenu()">
+        <ion-icon slot="start" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Noticias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="/assets/premiacioncovid.jpg" alt="">
+    <ion-item color="dark">
+      <ion-label>DUOC sanos y a salvo..espero</ion-label>
+    </ion-item>
+    <ion-text color="dark" class="textoCaja1">
+      <h6>
+        Definitivamente una buena adaptación al gran cambio que ha tenido el mundo
+        merece ser digna de un premio, la sede de Valparaíso tuvo la excelencia por mantener las buenas
+        prácticas, ante el virus del COVID-19.
+      </h6>
+    </ion-text>
+  </ion-card>
+  <ion-card>
+    <img src="/assets/cursoscortosduoc.jpg" alt="">
+    <ion-item color="dark">
+      <ion-label>¿Poco tiempo?</ion-label>
+    </ion-item>
+    <ion-text color="dark" class="textoCaja1">
+      <h6>
+        La nueva implementación de DUOC, te llevará a un mundo
+        nuevo de aprendizaje donde podrás desarrollar todas tus capacidades.
+        Y lo mejor de esto es que no te tomará tanto!.
+      </h6>
+    </ion-text>
+  </ion-card>
+  <ion-card>
+    <ion-item color="dark">
+      <ion-label>Talleres Implementados en DUOC UC</ion-label>
+    </ion-item>
+    <ion-text color="dark" class="textoCaja1">
+      <h6>
+        Ya estan disponibles los talleres deportivos, culturales y tecnológicos. Aprovecha de ir a tu sede para inscribirte
+        o puedes realizarlo en el siguiente link: <a>www.googleforms.com/inscripcionesduoc</a>
+      </h6>
+    </ion-text>
+  </ion-card>
+  <ion-card>
+    <img src="/assets/operacionrenta.jpg" alt="">
+    <ion-item color="dark">
+      <ion-label>Asesoría para la Comunidad!</ion-label>
+    </ion-item>
+    <ion-text color="dark" class="textoCaja1">
+      <h6>
+        Estudiantes de la institución DUOC UC de Puente Alto, están ayudando a la comunidad
+        de forma 100% gratuita!. Se harán atenciones presenciales desde el 01 hasta el 29 de abril,
+        entre las 9:00 y las 13:00 hrs.
+      </h6>
+    </ion-text>
+  </ion-card>
+  <ion-card>
+    <img src="/assets/plandesarrollo.jpg" alt="">
+    <ion-item color="dark">
+      <ion-label>Juntos hacia el futuro</ion-label>
+    </ion-item>
+    <ion-text color="dark" class="textoCaja1">
+      <h6>
+        Siempre es bueno recordar que Duoc UC lo hacemos las personas. 
+        Por tanto, este plan es el resultado de un proceso totalmente colaborativo, 
+        donde escuchamos a estudiantes, docentes y administrativos, que nos contaron cómo se imaginaban Duoc UC en los próximos años.
+      </h6>
+    </ion-text>
+  </ion-card>
+  <ion-item color="dark">
+    <ion-label slot="end">___ ___________</ion-label>
+  </ion-item>
+  <ion-item color="warning">
+    <ion-label class="texto-label">// FERIADOS EN EL AÑO //</ion-label>
+  </ion-item>
+    <ion-card>
+      <ion-grid fixed>
+        <ion-row *ngFor ="let feriado of offdays; let i=index">
+          <ion-col size="4"><b>{{feriado.title}}</b></ion-col>
+          <ion-col size="4"><b>{{feriado.date}}</b></ion-col>
+          <ion-col size="4"><b>{{feriado.extra}}</b></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  <ion-item color="dark">
+    <ion-label slot="start">_________  ______</ion-label>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-title slot="start">Duoc UC</ion-title>
+  </ion-toolbar>
+</ion-footer>

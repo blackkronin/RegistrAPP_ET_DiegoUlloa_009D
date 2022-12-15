@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="tituloIni">Registr APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Inicio de Sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formLogin"> 
+        <ion-item>
+          <ion-label position="floating">Correo:</ion-label>
+          <ion-input type="email" formControlName="correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña:</ion-label>
+          <ion-input type="password" formControlName="pass"></ion-input>
+        </ion-item>
+      </form>
+      <br>
+      <ion-button (click)="Ingresar()" expand="block" fill="full" shape="round" class="b-ingreso">
+        Ingresar
+      </ion-button>
+    </ion-card-content>
+    <ion-item>
+        <img src="/assets/profe login.png" alt="">
+    </ion-item>
+  </ion-card> 
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-title slot="start">Duoc UC</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registrarse']" class="b-register">
+        Registrarse
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

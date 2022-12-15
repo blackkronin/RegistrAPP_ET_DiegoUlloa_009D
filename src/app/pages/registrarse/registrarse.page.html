@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Registr APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Proceso de Registro</ion-card-title>
+    </ion-card-header>
+    <br>
+    <form [formGroup]="registerForm" (keyup.enter)="CrearUsuario()">
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input type="text" formControlName="nom"></ion-input>
+        <span class="text-danger" *ngIf="registerForm.controls['nom'].dirty && registerForm.hasError('required')">*Nombre es requerido</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type="email" formControlName="correo" ></ion-input>
+        <span class="text-danger" *ngIf="registerForm.controls['correo'].dirty && registerForm.hasError('required','email')">*Nombre es requerido</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="pass"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirmar contraseña</ion-label>
+        <ion-input type="password" formControlName="rePass"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Rut</ion-label>
+        <ion-input type="text" formControlName="rut"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Seleccione su rol en la institución</ion-label>
+        <ion-select value="" multiple="false" formControlName="rol">
+          <ion-select-option value="estudiante">Estudiante</ion-select-option>
+          <ion-select-option value="docente">Docente</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </form>
+    <br>
+    <ion-button type="submit" (click)="CrearUser()" expand="block" shape="full" color="warning">
+      Registrarse
+    </ion-button>
+    <ion-button expand="block" [routerLink]="['/login']" color="warning">
+      Volver a Login
+    </ion-button>
+    <ion-item>
+        <img src="/assets/registracion.png" alt="">
+    </ion-item>
+  </ion-card> 
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-title slot="start">Duoc UC</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="desplegarMenu()">
+        <ion-icon slot="start" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Desplegar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br>
+  <ion-item color="warning">
+    <ion-label>Es un nuevo dia!</ion-label>
+  </ion-item>
+  <ion-card>
+    <ion-card-content>
+      
+      <form>
+        <ion-item line="full">
+          <ion-label position="floating">Nombre Asignatura</ion-label>
+          <ion-input type="text" name="nomAsignatura" [(ngModel)]="nuevaClase.nom_asig"></ion-input>
+        </ion-item>
+        <ion-item line="full">
+          <ion-label position="floating">Sección / Modulo</ion-label>
+          <ion-input type="text" name="Sección/Modulo" [(ngModel)]="nuevaClase.modulo_seccion"></ion-input>
+        </ion-item>
+      </form>
+      <ion-button
+          color="warning" 
+          expand="block" 
+          class="ion-margin" 
+          (click)="generaScan()">
+          Generate QR Code  
+      </ion-button>
+
+      <qrcode 
+        [qrdata]="qrCodeString" 
+        [width]="312" 
+        [errorCorrectionLevel]="'M'">
+      </qrcode>
+    </ion-card-content>
+  </ion-card>
+  <br>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-icon slot="primary" name="logo-instagram"></ion-icon>
+    <ion-icon slot="secondary" name="globe"></ion-icon>
+    <ion-title>DUOC UC</ion-title>
+  </ion-toolbar>
+</ion-footer>

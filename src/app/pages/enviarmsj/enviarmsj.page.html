@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="desplegarMenu()">
+        <ion-icon slot="start" name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Enviar Mensajes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br><br>
+  <ion-card color="dark">
+    <ion-item color="warning">
+      <ion-label>Enviar Mensaje a Alumnos</ion-label>
+    </ion-item>
+    <ion-searchbar showCancelButton="focus"></ion-searchbar>
+    <ion-textarea>
+      <ion-label position="floating"><b> Ingrese el Mensaje Aquí</b></ion-label>
+    </ion-textarea>
+    <ion-button  expand="full" (click)="MensajeEnviado('top')">
+      Enviar Mensaje
+    </ion-button>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-icon slot="primary" name="logo-instagram"></ion-icon>
+    <ion-icon slot="secondary" name="globe"></ion-icon>
+    <ion-title>DUOC UC</ion-title>
+  </ion-toolbar>
+</ion-footer>
